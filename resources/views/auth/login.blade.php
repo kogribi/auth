@@ -6,8 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Reģistrēties</h1>
-    <form method="post" action="/register">
+    <h1>Logins</h1>
+    <form method="post" action="/login">
     @csrf
     @if ($errors->any())
     <ul>
@@ -16,23 +16,15 @@
     @endforeach
     </ul>
     @endif
-    <label>first name
-    <input name="first_name" required value="{{old("first_name")}}">
-    </label>
-    <br>
-    <label>last name
-    <input name="last_name" required value="{{old("last_name")}}">
-    </label>
-    <br>
-    <label> email
+    <label>email
     <input name="email" type="email" required value="{{old("email")}}">
     </label>
     <br>
-    <label> password
+    <label>password
     <input name="password" type="password" required value="{{old("password")}}">
     </label>
     <br>
-    <label> confirm password
+    <label>confirm password
     <input name="password_confirmation" type="password" required value="{{old("password_confirmation")}}">
     </label>
     <br>

@@ -8,9 +8,17 @@
 <body>
 @auth
   <p>Sveiks, {{ Auth::user()->first_name}}</p>
+  <form method="post" action="/logout">
+  @csrf
+  @method("delete")
+  <button>logout</button>
+  </form>
 @endauth
 @guest
   <p>Sveiks, viesi!</p>
+  <a href="/login">Login</a>
+  <br>
+  <a href="/register">Register</a>
 @endguest
 </body>
 </html>
