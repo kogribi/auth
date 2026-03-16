@@ -13,6 +13,7 @@
   @method("delete")
   <button>logout</button>
   </form>
+  <a href="/auth">Secret</a>
 @endauth
 @guest
   <p>Sveiks, viesi!</p>
